@@ -136,5 +136,4 @@ function position_2_change() {
         show2.style.backgroundColor = `green`;
     }
 }
-activity3();
 //# sourceMappingURL=activity3.js.map
