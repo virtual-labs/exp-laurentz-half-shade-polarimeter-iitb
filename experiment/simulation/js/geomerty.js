@@ -113,6 +113,78 @@ var Chemistry;
         }
     }
     Chemistry.Circle = Circle;
+    class SemiCircle extends Geometry {
+        constructor(stpt, radius, canvas) {
+            super();
+            this.value = 0;
+            this.color = "black";
+            this.connected = false;
+            this.stpt = stpt;
+            this.radius = radius;
+            this.canvas = canvas;
+            this.context = this.canvas.getContext('2d');
+        }
+        draw() {
+            //this.context.rotate(this.rotate_ang*Math.PI/180);
+            this.context.beginPath();
+            // Reset the canvas transformation
+            this.context.setTransform(1, 0, 0, 1, 0, 0);
+            // Translate the canvas origin to the center of the semicircle
+            this.context.translate(this.stpt.x * lscale, this.stpt.y * lscale);
+            // Rotate the canvas by the specified angle
+            this.context.rotate(this.rotate_ang * Math.PI / 180);
+            // Draw the arc (semicircle)
+            this.context.arc(0, 0, this.radius * lscale, 0, Math.PI, false);
+            // Draw a straight line from the ending point to the starting point of the arc to complete the semicircle
+            this.context.lineTo(-this.radius * lscale, 0);
+            // Fill the semicircle with the specified color
+            this.context.fillStyle = this.color;
+            this.context.fill();
+            // Stroke the outline of the semicircle
+            this.context.lineWidth = 1;
+            this.context.stroke();
+            // let text=new Text(this.value.toString(),this.stpt,this.canvas);
+            // text.textalingment="center";
+            // text.draw();
+            if (this.connected) {
+                this.draw_connection();
+            }
+        }
+        isinside(point) {
+            let dx = (this.stpt.x - point.x) * lscale;
+            let dy = (this.stpt.y - point.y) * lscale;
+            let r = Math.pow(dx * dx + dy * dy, 0.5);
+            if (r < this.radius) {
+                return (true);
+            }
+            else {
+                return (false);
+            }
+        }
+        change_value() {
+            if (this.value == 0) {
+                this.value = 1;
+                this.color = "green";
+            }
+            else if (this.value == 1) {
+                this.value = 0;
+                this.color = "red";
+            }
+        }
+        set_connection(geo) {
+            this.objconnected = geo;
+            this.connected = true;
+        }
+        draw_connection() {
+            this.context.beginPath();
+            this.context.moveTo(this.stpt.x * lscale, this.stpt.y * lscale);
+            this.context.lineTo(this.objconnected.stpt.x * lscale, this.objconnected.stpt.y * lscale);
+            this.context.stroke();
+            this.objconnected.color = this.color;
+            this.objconnected.value = this.value;
+        }
+    }
+    Chemistry.SemiCircle = SemiCircle;
     class Ellipse extends Geometry {
         constructor(stpt, major_length, minor_length, canvas) {
             super();

@@ -1,7 +1,8 @@
 var quiz_answer = 'false';
 function activity7() {
     pp.clearleftpannel();
-    pp.showdescription('', 3);
+    pp.showtitle(``, 3);
+    pp.showdescription(`<p id="exp-title" style='width: 25vw;'>Results</p>`, 3);
     document.getElementById('hide_panel3').click();
     let quiz_text = `
     <div>
@@ -34,7 +35,7 @@ function activity7() {
 function check_quiz(e) {
     console.log(e, quiz_answer);
     if (e == quiz_answer) {
-        pp.showdescription("Your Answers is Correct", 3);
+        pp.showdescription("Your Answer is Correct", 3);
     }
     else {
         pp.showdescription(`Your Answers is Incorrect, It is greater than the standerd value <br> ${calculated_s} > ${standard_value}`, 3);

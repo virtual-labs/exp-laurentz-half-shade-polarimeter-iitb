@@ -8,6 +8,7 @@ function activity5() {
     pp.clearleftpannel();
     load_main_table_2();
     // complete_table_act5();
+    pp.showtitle(`<p id="exp-title" style='width: 25vw;'>Calculations</p>`, 3);
     let des = `
   <p> Standerd Value S = (10 x &theta;) / length of tube x Concentration</p>
   <p>&theta;1 = Angle of rotation (position1)- reading for water(position1)</p>
@@ -68,17 +69,17 @@ function load_main_table_2() {
   <tbody id="table-body">
   <tr>
   <td>1</td>
-  <td>${main_table_data[sel_index].data[0][0]}</td>
-  <td>${main_table_data[sel_index].data[0][1]}</td>
-  <td>${main_table_data[sel_index].data[0][2]}</td>
-  <td>${main_table_data[sel_index].data[0][1] + main_table_data[sel_index].data[0][2]}</td>
-  <td>${main_table_data[sel_index].data[0][3]}</td>
+  <td>${main_table_data[sel_index].data[inner_index][0]}</td>
+  <td>${main_table_data[sel_index].data[inner_index][1]}</td>
+  <td>${main_table_data[sel_index].data[inner_index][2]}</td>
+  <td>${main_table_data[sel_index].data[inner_index][1] + main_table_data[sel_index].data[inner_index][2]}</td>
+  <td>${main_table_data[sel_index].data[inner_index][3]}</td>
 
  
   <td><input type="number" name="" id="inp-1"></td>
   <td><input type="number" name="" id="inp-2"></td>
   <td><input type="number" name="" id="inp-3"></td>
-  <td>${main_table_data[sel_index].data[0][5]}</td>
+  <td>${main_table_data[sel_index].data[inner_index][5]}</td>
   <td><input type="number" name="" id="inp-4"></td>
   <td><input type="button" value="Verify" onclick="verify_table2();" class="btn btn-primary"></td>
 </tr>
@@ -97,9 +98,9 @@ function verify_table2() {
     let val3 = document.getElementById("inp-3");
     let val4 = document.getElementById("inp-4");
     console.log(parseFloat(val1.value));
-    theta1 = main_table_data[sel_index].data[0][2] - main_table_data[sel_index].data[0][0];
-    theta2 = main_table_data[sel_index].data[0][1] + main_table_data[sel_index].data[0][2] - main_table_data[sel_index].data[0][1];
-    let s = ((theta1 + theta2) / 2) * 10 / (main_table_data[sel_index].data[0][3] * main_table_data[sel_index].data[0][5]);
+    theta1 = main_table_data[sel_index].data[inner_index][2] - main_table_data[sel_index].data[inner_index][0];
+    theta2 = main_table_data[sel_index].data[inner_index][1] + main_table_data[sel_index].data[inner_index][2] - main_table_data[sel_index].data[inner_index][1];
+    let s = ((theta1 + theta2) / 2) * 10 / (main_table_data[sel_index].data[inner_index][3] * main_table_data[sel_index].data[inner_index][5]);
     console.log(theta1, theta2, s);
     // console.log(Q.value, To.value, Ti.value, ti.value, to.value);
     if (Math.abs(parseFloat(val1.value) - theta1) > 0.00001) {

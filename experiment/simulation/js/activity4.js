@@ -1,9 +1,15 @@
 var table_btn = `<button id="panel1_btn" class="btn btn-primary" onclick="activity5();" style="
 position: absolute; bottom: 12vh; width: 90%;">Next</button>`;
-var sel_index = -1;
 var main_table;
 function activity4() {
     pp.clearleftpannel();
+    pp.clearrightpannel();
+    pp.addoffcanvas(3);
+    pp.showtitle(`<p id="exp-title" style='width: 25vw;'>Obsevation Table</p>`, 3);
+    pp.showdescription(`<div style="background-color: #f4ccccff; border-radius: 10px; border: black; padding: 5%; font-weight: 500; font-size: calc(1vw + 12px);">
+  <p>* Position 1 is your observed angle(degrees)</p>
+  <p>* Position 2 = 180 + Position 1</p>
+  </p>`, 3);
     load_main_table();
 }
 function load_main_table() {
@@ -46,12 +52,12 @@ function load_main_table() {
      </thead>
      <tbody id="table-5-body">
        <tr>
-           <td>1</td>
-           <td>${main_table_data[sel_index].data[0][0]}</td>
-           <td>${main_table_data[sel_index].data[0][1]}</td>
+           <td>${inner_index + 1}</td>
+           <td>${main_table_data[sel_index].data[inner_index][0]}</td>
+           <td>${main_table_data[sel_index].data[inner_index][1]}</td>
            <td><input style="width: 100%;" id="mt-1" type="text" class="form-control"></td>
            <td><input style="width: 100%;" id="mt-2" type="text" class="form-control"></td>
-           <td>${main_table_data[sel_index].data[0][3]}</td>
+           <td>${main_table_data[sel_index].data[inner_index][3]}</td>
            <td><input style="width: 100%;" class="btn btn-primary" onclick="act4_verify_table();" value="verify" style="width: 100%" type="button"></td>
        </tr>
      </tbody>
@@ -66,20 +72,24 @@ function load_main_table() {
 function act4_verify_table() {
     let val1 = document.getElementById("mt-1");
     let val2 = document.getElementById("mt-2");
-    console.log(parseFloat(val1.value), main_table_data[sel_index].data[0][2]);
-    console.log(parseFloat(val2.value), main_table_data[sel_index].data[0][1] + main_table_data[sel_index].data[0][2]);
+    if (!val1.value || !val2.value) {
+        alert('Enter values in both fields');
+        return;
+    }
+    console.log(parseFloat(val1.value), main_table_data[sel_index].data[inner_index][2]);
+    console.log(parseFloat(val2.value), main_table_data[sel_index].data[inner_index][1] + main_table_data[sel_index].data[0][2]);
     // console.log(Q.value, To.value, Ti.value, ti.value, to.value);
-    if (Math.abs(parseFloat(val1.value) - main_table_data[sel_index].data[0][2]) > 0.000001) {
-        console.log(parseFloat(val1.value), main_table_data[sel_index].data[0][2]);
+    if (Math.abs(parseFloat(val1.value) - main_table_data[sel_index].data[inner_index][2]) > 0.000001) {
+        console.log(parseFloat(val1.value), main_table_data[sel_index].data[inner_index][2]);
         alert("please correct the first value");
         return;
     }
-    if (Math.abs(parseFloat(val2.value) - (main_table_data[sel_index].data[0][1] + main_table_data[sel_index].data[0][2])) > 0.000001) {
-        console.log(parseFloat(val2.value), main_table_data[sel_index].data[0][1] + parseFloat(val1.value));
+    if (Math.abs(parseFloat(val2.value) - ((main_table_data[sel_index].data[inner_index][1] + main_table_data[sel_index].data[inner_index][2]))) > 0.01) {
+        console.log(parseFloat(val2.value), main_table_data[sel_index].data[inner_index][1] + main_table_data[sel_index].data[inner_index][2]);
         alert("please correct the second value");
         return;
     }
-    main_table_data[sel_index].data[0][2] = parseFloat(val1.value);
+    main_table_data[sel_index].data[inner_index][2] = parseFloat(val1.value);
     alert("all values are correct");
     complete_main_table();
     pp.showdescription("Click next to load the next table", 3);
