@@ -52,7 +52,7 @@ function activity1() {
     //define the canvas
     pp.addcanvas('mycanvas');
     // pp.addtorightpannel(question_div_box, 3);
-    pp.showtitle(`<p id="exp-title">Let's Identify the components required to study the <span id="des"> Heat Transfer Coefficient under Turbulent Conditions</span><p>`, 3);
+    pp.showtitle(`<p id="exp-title">Let's Identify the components required </p>`, 3);
     pp.showscore(0, 3);
     canvas = pp.canvas;
     context = canvas.getContext('2d');
@@ -115,7 +115,7 @@ function a1_draw_all_components() {
     sq.name = "half_shade_plate";
     scene.add(sq);
     var sq = new Chemistry.Custome_image(tube, new Chemistry.Point(1000, 500), 452, 127, canvas);
-    sq.name = "tube";
+    sq.name = "sample filled tube";
     scene.add(sq);
     var sq = new Chemistry.Custome_image(analyzer, new Chemistry.Point(1400, 500), 174, 403, canvas);
     sq.name = "analyzer";
@@ -132,7 +132,7 @@ function a1_load_questions() { }
     question.push({ srno: 2, question: "Select <span style='color: #018fc3'> Unpolarized Light </span>", ans: "unpolarized_light", hint: ["Rectangular", "Mounted Vertically", "Has valves attached"] });
     question.push({ srno: 3, question: "Select <span style='color: #018fc3'> Canada Balsm Layer </span>", ans: "canada_balsm", hint: ["Rectangular", "Mounted Vertically", "Has valves attached"] });
     question.push({ srno: 4, question: "Select <span style='color: #018fc3'>Half Shade Plate</span>", ans: "half_shade_plate", hint: ["Double Pipe", "pipe inside a pipe", "Has two inlets and outlets"] });
-    question.push({ srno: 5, question: "Select <span style='color: #018fc3'> Polarimeter Tube </span>", ans: "tube", hint: ["U-Shape", "Mounted horizontally", "Has two pins"] });
+    question.push({ srno: 5, question: "Select <span style='color: #018fc3'> Polarimeter Sample filled Tube </span>", ans: "sample filled tube", hint: ["U-Shape", "Mounted horizontally", "Has two pins"] });
     question.push({ srno: 6, question: "Select <span style='color: #018fc3'> Analyzer </span>", ans: "analyzer", hint: ["Rectangular box with sensor", "Display SET T", "Has two wires protruding down"] });
     question.push({ srno: 7, question: "Select <span style='color: #018fc3'> Scale for measuring angle of rotation </span>", ans: "rotation_scale", hint: ["Rectnagular box with sensor", "Horizontal", ""] });
 }
@@ -174,7 +174,7 @@ function load_higlighted_images() {
         new Chemistry.Text("unpolarized_light", new Chemistry.Point(270, 100), canvas),
         new Chemistry.Text("canada_balsm", new Chemistry.Point(400, 100), canvas),
         new Chemistry.Text("half_shade_plate", new Chemistry.Point(680, 100), canvas),
-        new Chemistry.Text("tube", new Chemistry.Point(1000, 100), canvas),
+        new Chemistry.Text("sample filled tube", new Chemistry.Point(1000, 100), canvas),
         new Chemistry.Text("analyzer", new Chemistry.Point(1400, 100), canvas),
         new Chemistry.Text("rotation_scale", new Chemistry.Point(1700, 100), canvas)
     ];

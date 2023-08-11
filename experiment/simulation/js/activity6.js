@@ -105,6 +105,7 @@ function draw_chart() {
     <p>S: <input type="text" name="" id="s-inp"></p>
     <p><input id="act6-temp-btn" type="button" class="btn btn-primary" name="" onclick="verify_slope();" value="verify"></p>
     `;
+    pp.showtitle(`<p id="exp-title" style='width: 25vw;'>Concentration vs Angle of Rotation</p>`, 3);
     pp.addtorightpannel(calc_slope, 3);
 }
 function calculate_y_datapoints() {
