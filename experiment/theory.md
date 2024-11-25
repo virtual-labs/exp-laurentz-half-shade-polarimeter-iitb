@@ -6,7 +6,7 @@
 
 ![formula](./images/formula.png)
 
-<p> where,
+where,
 
 &emsp;&emsp; **C** - Concentration of solution,
 
@@ -14,7 +14,7 @@
 
 &emsp;&emsp; **S** - Specific Rotation,
 
-&emsp;&emsp; **l** - Length of a tube. </p>
+&emsp;&emsp; **l** - Length of a tube.
 
 ## Prior concept
 

@@ -4,11 +4,11 @@ var context;
 var canvas_box_scale;
 var scene;
 var rect;
-var cc = document.getElementById("pannelcreate");
+var cc = (document.getElementById('pannelcreate'));
 var pp = new Pannel(cc);
 pp.addoffcanvas(3);
 var act1_btn = document.createElement('div');
-act1_btn.innerHTML = `<button id="panel1_btn" class="btn btn-primary" onclick="move_to_activity3()" style="position: absolute; bottom: 12vh; width: 85%;">Next</button>`;
+act1_btn.innerHTML = `<button id="panel1_btn" class="btn btn-primary" onclick="move_to_activity3()" >Next</button>`;
 var act1_start_button = document.createElement('div');
 act1_start_button.innerHTML = `<button id="panel1_btn" class="btn btn-primary" onclick="start_act1();">Start</button>`;
 function start_act1() {
@@ -32,7 +32,7 @@ var total_score = 0;
 var current_score = 3;
 var global_score = 0;
 var a1_panel;
-var all_text_content = document.getElementById("div");
+var all_text_content = document.getElementById('div');
 var canvas_box_scale = 1;
 var highlighted_images = [];
 var a1_labels = [];
@@ -57,17 +57,17 @@ function activity1() {
     canvas = pp.canvas;
     context = canvas.getContext('2d');
     // add rect and scene
-    canvas.style.cursor = "crosshair";
+    canvas.style.cursor = 'crosshair';
     rect = canvas.getBoundingClientRect();
     scene = new Scene();
     // add canvas sizing
     window.onload = a1_windowresize;
     window.onresize = a1_windowresize;
     a1_windowresize();
-    var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById("offcanvasRight3"));
+    var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasRight3'));
     bsOffcanvas.show();
     a1_draw_all_components();
-    window.addEventListener("resize", a1_display_current_question);
+    window.addEventListener('resize', a1_display_current_question);
     // add_button(`<button id='screen-button' class="btn btn-info" style="width: 100%; margin-bottom: 5%;" onclick="(() =>{
     //     document.getElementById('screen-button').remove();
     //     canvas.addEventListener('click',a1_mouseclick);
@@ -92,9 +92,10 @@ function a1_windowresize() {
 }
 function a1_canvas_size() {
     canvas.width = window.innerWidth * 0.91;
-    canvas.height = canvas.width * 1080.0 / 1920 * 0.85;
+    canvas.height = ((canvas.width * 1080.0) / 1920) * 0.85;
     lscale = canvas.width / 1920.0;
-    document.getElementById('leftpannel').style.height = (canvas.height + 5) + "px";
+    document.getElementById('leftpannel').style.height =
+        canvas.height + 5 + 'px';
     document.getElementById('leftpannel').style.margin = '0';
 }
 function a1_canvas_mapping() {
@@ -103,38 +104,85 @@ function a1_canvas_mapping() {
 }
 function a1_draw_all_components() {
     var sq = new Chemistry.Custome_image(mono_source, new Chemistry.Point(150, 500), 453, 142, canvas);
-    sq.name = "mono_source";
+    sq.name = 'mono_source';
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(unpolarized_light, new Chemistry.Point(270, 500), 139, 310, canvas);
-    sq.name = "unpolarized_light";
+    var sq = new Chemistry.Custome_image(unpolarized_light, new Chemistry.Point(320, 500), 139, 310, canvas);
+    sq.name = 'unpolarized_light';
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(canada_balsm, new Chemistry.Point(480, 500), 210, 323, canvas);
-    sq.name = "canada_balsm";
+    var sq = new Chemistry.Custome_image(canada_balsm, new Chemistry.Point(570, 500), 210, 323, canvas);
+    sq.name = 'canada_balsm';
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(half_shade_plate, new Chemistry.Point(680, 500), 97, 342, canvas);
-    sq.name = "half_shade_plate";
+    var sq = new Chemistry.Custome_image(half_shade_plate, new Chemistry.Point(800, 500), 97, 342, canvas);
+    sq.name = 'half_shade_plate';
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(tube, new Chemistry.Point(1000, 500), 452, 127, canvas);
-    sq.name = "sample filled tube";
+    var sq = new Chemistry.Custome_image(tube, new Chemistry.Point(1120, 500), 452, 127, canvas);
+    sq.name = 'sample filled tube';
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(analyzer, new Chemistry.Point(1400, 500), 174, 403, canvas);
-    sq.name = "analyzer";
+    var sq = new Chemistry.Custome_image(analyzer, new Chemistry.Point(1470, 500), 174, 403, canvas);
+    sq.name = 'analyzer';
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(rotation_scale, new Chemistry.Point(1700, 500), 303, 302, canvas);
-    sq.name = "rotation_scale";
+    var sq = new Chemistry.Custome_image(rotation_scale, new Chemistry.Point(1750, 500), 303, 302, canvas);
+    sq.name = 'rotation_scale';
     scene.add(sq);
 }
 //list of all activity 1 questions
 function a1_load_questions() { }
 {
     question = [];
-    question.push({ srno: 1, question: "Select <span style='color: #018fc3'>Monocromatic Source</span>", ans: "mono_source", hint: ["Has Suction and Discharge", "Has valve attached", "Triangular Base"] });
-    question.push({ srno: 2, question: "Select <span style='color: #018fc3'> Unpolarized Light </span>", ans: "unpolarized_light", hint: ["Rectangular", "Mounted Vertically", "Has valves attached"] });
-    question.push({ srno: 3, question: "Select <span style='color: #018fc3'> Canada Balsm Layer </span>", ans: "canada_balsm", hint: ["Rectangular", "Mounted Vertically", "Has valves attached"] });
-    question.push({ srno: 4, question: "Select <span style='color: #018fc3'>Half Shade Plate</span>", ans: "half_shade_plate", hint: ["Double Pipe", "pipe inside a pipe", "Has two inlets and outlets"] });
-    question.push({ srno: 5, question: "Select <span style='color: #018fc3'> Polarimeter Sample filled Tube </span>", ans: "sample filled tube", hint: ["U-Shape", "Mounted horizontally", "Has two pins"] });
-    question.push({ srno: 6, question: "Select <span style='color: #018fc3'> Analyzer </span>", ans: "analyzer", hint: ["Rectangular box with sensor", "Display SET T", "Has two wires protruding down"] });
-    question.push({ srno: 7, question: "Select <span style='color: #018fc3'> Scale for measuring angle of rotation </span>", ans: "rotation_scale", hint: ["Rectnagular box with sensor", "Horizontal", ""] });
+    question.push({
+        srno: 1,
+        question: "Select <span style='color: #018fc3'>Monocromatic Source</span>",
+        ans: 'mono_source',
+        hint: [
+            'Has Suction and Discharge',
+            'Has valve attached',
+            'Triangular Base',
+        ],
+    });
+    question.push({
+        srno: 2,
+        question: "Select <span style='color: #018fc3'> Unpolarized Light </span>",
+        ans: 'unpolarized_light',
+        hint: ['Rectangular', 'Mounted Vertically', 'Has valves attached'],
+    });
+    question.push({
+        srno: 3,
+        question: "Select <span style='color: #018fc3'> Canada Balsm Layer </span>",
+        ans: 'canada_balsm',
+        hint: ['Rectangular', 'Mounted Vertically', 'Has valves attached'],
+    });
+    question.push({
+        srno: 4,
+        question: "Select <span style='color: #018fc3'>Half Shade Plate</span>",
+        ans: 'half_shade_plate',
+        hint: [
+            'Double Pipe',
+            'pipe inside a pipe',
+            'Has two inlets and outlets',
+        ],
+    });
+    question.push({
+        srno: 5,
+        question: "Select <span style='color: #018fc3'> Polarimeter Sample filled Tube </span>",
+        ans: 'sample filled tube',
+        hint: ['U-Shape', 'Mounted horizontally', 'Has two pins'],
+    });
+    question.push({
+        srno: 6,
+        question: "Select <span style='color: #018fc3'> Analyzer </span>",
+        ans: 'analyzer',
+        hint: [
+            'Rectangular box with sensor',
+            'Display SET T',
+            'Has two wires protruding down',
+        ],
+    });
+    question.push({
+        srno: 7,
+        question: "Select <span style='color: #018fc3'> Scale for measuring angle of rotation </span>",
+        ans: 'rotation_scale',
+        hint: ['Rectnagular box with sensor', 'Horizontal', ''],
+    });
 }
 function a1_display_current_question() {
     //document.getElementById("score-div-box").innerText = total_score.toString();
@@ -151,7 +199,7 @@ function a1_display_current_question() {
         a1_labels[a1_index[j]].draw();
     }
     question_text = new Chemistry.Text(text, new Chemistry.Point(1100, 520), canvas);
-    question_text.color = "white";
+    question_text.color = 'white';
     // question_text.draw();
     //display_score=new Chemistry.Text(`Score: ${total_score}/27`,new Chemistry.Point(1650,620),canvas);
     //display_score.color="yellow";
@@ -167,17 +215,18 @@ function load_higlighted_images() {
         [half_shade_plate, half_shade_plate],
         [tube, tube],
         [analyzer, analyzer],
-        [rotation_scale, rotation_scale]
+        [rotation_scale, rotation_scale],
     ];
     a1_labels = [
-        new Chemistry.Text("mono_source", new Chemistry.Point(80, 100), canvas),
-        new Chemistry.Text("unpolarized_light", new Chemistry.Point(270, 100), canvas),
-        new Chemistry.Text("canada_balsm", new Chemistry.Point(400, 100), canvas),
-        new Chemistry.Text("half_shade_plate", new Chemistry.Point(680, 100), canvas),
-        new Chemistry.Text("sample filled tube", new Chemistry.Point(1000, 100), canvas),
-        new Chemistry.Text("analyzer", new Chemistry.Point(1400, 100), canvas),
-        new Chemistry.Text("rotation_scale", new Chemistry.Point(1700, 100), canvas)
+        new Chemistry.Text('mono_source', new Chemistry.Point(30, 570), canvas),
+        new Chemistry.Text('unpolarized_light', new Chemistry.Point(220, 300), canvas),
+        new Chemistry.Text('canada_balsm', new Chemistry.Point(480, 300), canvas),
+        new Chemistry.Text('half_shade_plate', new Chemistry.Point(710, 300), canvas),
+        new Chemistry.Text('sample filled tube', new Chemistry.Point(1000, 400), canvas),
+        new Chemistry.Text('analyzer', new Chemistry.Point(1450, 270), canvas),
+        new Chemistry.Text('rotation_scale', new Chemistry.Point(1680, 300), canvas),
     ];
+    a1_labels.map((label) => (label.font = '25vw Arial'));
 }
 function a1_random_questions() {
     arrayofrandquestion = [];
@@ -206,7 +255,7 @@ function a1_check_isinside(x, y) {
         if (scene.container[i].geo.isinside(new Chemistry.Point(x, y))) {
             if (scene.container[i].geo.name == ans) {
                 found = 1;
-                var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById("offcanvasRight3"));
+                var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasRight3'));
                 bsOffcanvas.show();
                 let original_image = scene.container[i].geo.img;
                 scene.container[i].geo.img = highlighted_images[i][0];
@@ -238,9 +287,9 @@ function a1_check_isinside(x, y) {
         }
     }
     if (found == 1) {
-        display_result = new Chemistry.Text("Bingo! it is correct", new Chemistry.Point(1100, 450), canvas);
-        display_result.color = "yellow";
-        display_result.font = "24px";
+        display_result = new Chemistry.Text('Bingo! it is correct', new Chemistry.Point(1100, 450), canvas);
+        display_result.color = 'yellow';
+        display_result.font = '24px';
         //display_result.draw();
         if (current_question <= question.length) {
             current_question++;
@@ -266,9 +315,9 @@ function a1_check_isinside(x, y) {
     }
     else if (found == 2) {
         console.log(current_hint);
-        var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById("offcanvasRight3"));
+        var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasRight3'));
         bsOffcanvas.show();
-        display_result = new Chemistry.Text("Try again. Hint:" + question[current_index].hint[current_hint - 1], new Chemistry.Point(1100, 450), canvas);
+        display_result = new Chemistry.Text('Try again. Hint:' + question[current_index].hint[current_hint - 1], new Chemistry.Point(1100, 450), canvas);
         // document.getElementById("question-div-box").innerHTML = `
         // <div class='text-color-purple'>Thats not a ${ans}</div>
         // <div>Try Again!!</div>
@@ -287,8 +336,8 @@ function a1_check_isinside(x, y) {
             current_score = 3 - current_hint;
             current_hint++;
         }
-        display_result.color = "white";
-        display_result.font = "15px";
+        display_result.color = 'white';
+        display_result.font = '15px';
         //display_result.draw();
         timer1 = setTimeout(a1_change_question, 2000);
     }
@@ -309,13 +358,13 @@ function a1_change_question() {
         // display_result.color="Green";
         // display_result.draw();
         global_score = total_score;
-        const act2 = document.createElement("input");
-        act2.type = "button";
+        const act2 = (document.createElement('input'));
+        act2.type = 'button';
         act2.onclick = activity3;
         //document.getElementById("root").appendChild(act2);
-        act2.value = "Next";
-        act2.className = "btn btn-success";
-        act2.style.fontSize = "1.0vw";
+        act2.value = 'Next';
+        act2.className = 'btn btn-success';
+        act2.style.fontSize = '1.0vw';
         // guide.value  = "Click Next Button";
         //document.getElementById("question-div-box").innerText = "";
         // add_button(`<button id='screen-button' class="btn btn-info" style="width: 100%; margin-bottom: 5%;" onclick="(() =>{
@@ -324,7 +373,7 @@ function a1_change_question() {
         //     activity2();})();">Next</button>`)
         pp.addtorightpannel(act1_btn.innerHTML, 3);
         //document.getElementById("question-div-box").appendChild(act2);
-        window.removeEventListener("resize", a1_display_current_question);
+        window.removeEventListener('resize', a1_display_current_question);
         //clearInterval(timer1);
     }
     else {
