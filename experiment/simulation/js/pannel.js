@@ -9,9 +9,10 @@ class Pannel {
     constructor(divpannelid) {
         this.divpannel = divpannelid;
         this.redraw();
-        this.leftpannel = document.getElementById("leftpannel");
-        this.rightpannel = document.getElementById("rightpannel");
-        this.leftpannel.style.height = (window.innerHeight - 5).toString() + 'px';
+        this.leftpannel = document.getElementById('leftpannel');
+        this.rightpannel = (document.getElementById('rightpannel'));
+        this.leftpannel.style.height =
+            (window.innerHeight - 5).toString() + 'px';
         //this.rightpannel.style.height = (window.innerHeight - 5).toString() + 'px';
         // this.offcanvasRightLabel1 = <HTMLDivElement> document.getElementById('offcanvasRightLabel1');
     }
@@ -24,7 +25,7 @@ class Pannel {
         aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header" style="display: flex !important; flex-direction: column !important;">
 
-        <button id="hide_panel${id}" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button id="hide_panel${id}" type="button" class="btn btn-danger close-btn" data-bs-dismiss="offcanvas" aria-label="Close"> Hide Pan</button>
         <h5 class="offcanvas-title" id="offcanvasRightLabel${id}"></h5>
            
         </div>
@@ -33,7 +34,7 @@ class Pannel {
 
         </div>
     </div>
-    <button class="offcanvasbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight${id}" aria-controls="offcanvasRight${id}" style="width: 4%;"><i class="bi bi-gear offcanvasicon" style="font-size: calc(1vw + 12px);"></i></button>
+    <button class="offcanvasbtn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight${id}" aria-controls="offcanvasRight${id}" style="width: 4%;"><i class="bi bi-arrow-bar-left offcanvasicon" style="font-size: calc(1vw + 12px);"></i></button>
       <br>  `;
     }
     addcanvas(canvasid) {
@@ -44,22 +45,22 @@ class Pannel {
         this.leftpannel.innerHTML += component;
     }
     addtorightpannel(component, id) {
-        document.getElementById("pannel" + id).innerHTML += component;
+        document.getElementById('pannel' + id).innerHTML += component;
     }
     clearleftpannel() {
-        this.leftpannel.innerHTML = "";
+        this.leftpannel.innerHTML = '';
     }
     clearrightpannel() {
-        this.rightpannel.innerHTML = "";
+        this.rightpannel.innerHTML = '';
     }
     showdescription(text, id) {
-        document.getElementById("pannel" + id).innerHTML = `<div id="description">${text}</div>`;
+        document.getElementById('pannel' + id).innerHTML = `<div id="description">${text}</div>`;
     }
     showtitle(text, id) {
-        document.getElementById("offcanvasRightLabel" + id).innerHTML = text;
+        document.getElementById('offcanvasRightLabel' + id).innerHTML = text;
     }
     showscore(text, id) {
-        document.getElementById("pannel" + id).innerHTML += `<div style="width: 90%;"  id="score">Score: ${text}</div>`;
+        document.getElementById('pannel' + id).innerHTML += `<div  id="score">Score: ${text}</div>`;
         // this.rightpannel.innerHTML+=`<div style=""  id="score">Score: ${text}</div>`
     }
 }

@@ -8,7 +8,7 @@ function activity7() {
     <div>
 
         <div>
-            <p>Standerd Value of Specific Rotation of ${dd_value} ==> ${main_table_data[sel_index].data[0][4].toFixed(2)}</p>
+            <p>Standard Value of Specific Rotation of ${dd_value} ==> ${main_table_data[sel_index].data[0][4].toFixed(2)}</p>
             <p>Experimental Value of Specific Rotation of ${dd_value} ==> ${calculated_s.toFixed(2)}</p>
         </div>
 
@@ -21,7 +21,7 @@ function activity7() {
             <label for="yes_ans">Yes</label>
             <input id="yes_ans" type="radio" name="quiz_ans" value="true" onclick="check_quiz('true');">
 
-            <label for="no_ans"></label>
+            <label for="no_ans">No</label>
             <input type="radio" name="quiz_ans" id="no_ans" value="false"  onclick="check_quiz('false');">
         </div>
 
@@ -35,12 +35,16 @@ function activity7() {
 function check_quiz(e) {
     console.log(e, quiz_answer);
     if (e == quiz_answer) {
-        pp.showdescription("Your Answer is Correct", 3);
+        pp.showdescription(`<div style="background-color: #f4ccccff; border-radius: 10px; border: black; padding: 5%; font-weight: 500; font-size: calc(1vw + 12px);">
+      Your answer is correct. You have successfully completed the experiment.
+      </div>`, 3);
     }
     else {
-        pp.showdescription(`Your Answers is Incorrect, It is greater than the standerd value <br> ${calculated_s} > ${standard_value}`, 3);
+        pp.showdescription(`<div style="background-color: #f4ccccff; border-radius: 10px; border: black; padding: 5%; font-weight: 500; font-size: calc(1vw + 12px);">
+      Your Answers is Incorrect, It is less than the standard value <br> ${calculated_s.toFixed(2)} < ${standard_value}<br> Experiment completed.
+      </div>`, 3);
     }
-    var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById("offcanvasRight3"));
+    var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById('offcanvasRight3'));
     bsOffcanvas.show();
 }
 //# sourceMappingURL=activity7.js.map
