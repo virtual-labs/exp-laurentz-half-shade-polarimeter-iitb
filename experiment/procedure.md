@@ -33,7 +33,7 @@
                 <th rowspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">Sr. No.</th>
                 <th colspan="5" style="border: 1px solid black; text-align: center; padding: 8px;">CSR with Distilled Water</th>
                 <th colspan="5" style="border: 1px solid black; text-align: center; padding: 8px;">CSR with Sugar Solution</th>
-                <th rowspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">Angle of Rotation</th>
+                <th  style="border: 1px solid black; text-align: center; padding: 8px;">Angle of Rotation</th>
             </tr>
             <tr>
                 <th colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;">MSR</th>
@@ -42,6 +42,7 @@
                 <th colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;">MSR</th>
                 <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">VSR = (LC &times; coinciding line)</th>
                 <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">TR = θ2</th>
+                <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">θ = θ1 - θ2</th>
             </tr>
         </thead>
         <tbody>
