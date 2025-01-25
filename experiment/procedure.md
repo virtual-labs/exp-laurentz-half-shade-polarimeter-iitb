@@ -9,9 +9,13 @@
 
 <img src="./images/fig_1.png">
 
-<h3>Diagram</h3>
+<br>
+<br>
 
-<img src="./images/fig_2.jpg">
+<h3>Diagram</h3>
+<br>
+
+<img src="./images/fig_2.jpg" style="width:80%">
 <img src="./images/fig_3.jpg">
 
 <h3>Observation</h3>
@@ -23,47 +27,46 @@
 
 <h3> Observation Table</h3>
 
-<table border="1">
-   <thead>
-      <tr>
-      <th rowspan="2">Sr. No.</th>
-      <th colspan="5">CSR with Distilled Water</th>
-      <th colspan="5">CSR with Sugar Solution</th>
-      <th rowspan="1" >Angle of Rotation</th>
-   </tr>
-   <tr>
-      <th colspan="1">MSR</th>
-      <th colspan="2">VSR = (LC &times coinciding line) </th>
-      <th colspan="2">TR = θ1</th>
-      <th colspan="1">MSR</th>
-      <th colspan="2">VSR = (LC * coinciding line)</th>
-      <th colspan="2">TR = θ2</th>
-      <th colspan="1">θ = θ1 - θ2</th>
-   </tr>
-   </thead>
-   <tbody>
-      <tr>
-      <td>1</td>
-      <td colspan="1"></td>
-      <td colspan="2"></td>
-      <td colspan="2"></td>
-      <td colspan="1"></td>
-      <td colspan="2"></td>
-      <td colspan="2"></td>
-      <td colspan="2"></td>
-   </tr>
-   <tr>
-      <td>2</td>
-      <td colspan="1"></td>
-      <td colspan="2"></td>
-      <td colspan="2"></td>
-      <td colspan="1"></td>
-      <td colspan="2"></td>
-      <td colspan="2"></td>
-      <td colspan="2"></td>
-   </tr>
-   </tbody>
-</table>  
+<table style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr>
+                <th rowspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">Sr. No.</th>
+                <th colspan="5" style="border: 1px solid black; text-align: center; padding: 8px;">CSR with Distilled Water</th>
+                <th colspan="5" style="border: 1px solid black; text-align: center; padding: 8px;">CSR with Sugar Solution</th>
+                <th rowspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">Angle of Rotation</th>
+            </tr>
+            <tr>
+                <th colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;">MSR</th>
+                <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">VSR = (LC &times; coinciding line)</th>
+                <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">TR = θ1</th>
+                <th colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;">MSR</th>
+                <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">VSR = (LC &times; coinciding line)</th>
+                <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">TR = θ2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid black; text-align: center; padding: 8px;">1</td>
+                <td colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; text-align: center; padding: 8px;">2</td>
+                <td colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+            </tr>
+        </tbody>
+    </table>
 
 <h3>Result</h3>
 
