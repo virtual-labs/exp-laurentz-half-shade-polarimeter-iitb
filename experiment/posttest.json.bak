@@ -1,0 +1,47 @@
+[
+    {
+        "question": " Rotation occurred in the plane polarized light can be measure by",
+        "qid": 1,
+        "option_a": "Tachometer",
+        "option_b": "Polarimeter",
+        "option_c": "Viscometer",
+        "option_d": "Manometer",
+        "correct_option": "b"
+    },
+    {
+        "question": "The change in optical rotation with the time of freshly prepared solution of optically active solution is known as",
+        "qid": 2,
+        "option_a": "Mutual rotation",
+        "option_b": "Specific rotation",
+        "option_c": "Inversion",
+        "option_d": "Rotatory motion",
+        "correct_option": "b"
+    },
+    {
+        "question": "Which of the following is a true statement?",
+        "qid": 3,
+        "option_a": "Specific rotation is independent of concentration",
+        "option_b": "Observed rotation is independent of light path of the polarimeter",
+        "option_c": "Observed rotation is independent of concentration",
+        "option_d": "Observed rotation is independent of light path of the polarimeter and concentration both",
+        "correct_option": "a"
+    },
+    {
+        "question": "What is the effect of the length of the tube on the observed rotation, if length of the tube gets double?",
+        "qid": 4,
+        "option_a": "Observed rotation gets double",
+        "option_b": "Observed rotation gets halved",
+        "option_c": "Observed rotation gets four times",
+        "option_d": "Observed rotation remains unaffected",
+        "correct_option": "a"
+    },
+    {
+        "question": "Select the correct unit of specific rotation?",
+        "qid": 5,
+        "option_a": "degree/decimeter/gm/cc",
+        "option_b": "decimeter/gm/cc/degree",
+        "option_c": "gm/cc/degree/decimeter",
+        "option_d": "cc/degree/decimeter/gm",
+        "correct_option": "a"
+    }
+]

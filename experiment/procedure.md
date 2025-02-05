@@ -1,33 +1,76 @@
-## Procedure
+<h3>Procedure</h3>
 
-1. Fill the Polarimeter tube with water & put it in the Polarimeter
-2. The telescope is focused on the half shade & the analyzer is rotated till the equal intensity of light is obtained the reading for this position of telescope is noted.
-3. Now the tube filled with optically active liquid
+<ol>
+   <li>Fill the Polarimeter tube with water & put it in the Polarimeter</li>
+   <li>The telescope is focused on the half shade & the analyzer is rotated till the equal intensity of light is obtained the reading for this position of telescope is noted.</li>
+   <li>Now the tube filled with optically active liquid</li>
+   <li>The analyzer is rotated till the equal intensity of light is obtained in the field of view of telescope. The new position of analyzer is noted in the observation table. The difference in the two readings gives the angle of rotation. Specific rotation of solution can be determine use in the above formula.</li>
+</ol>
 
-4. The analyzer is rotated till the equal intensity of light is obtained in the field of view of telescope. The new position of analyzer is noted in the observation table. The difference in the two readings gives the angle of rotation. Specific rotation of solution can be determine use in the above formula.
+<img src="./images/fig_1.png">
 
-![Figure 1](./images/fig_1.png)
+<br>
+<br>
 
-## Diagram
+<h3>Diagram</h3>
+<br>
 
-![Figure 2](./images/fig_2.jpg)
-![Figure 3](./images/fig_3.jpg)
+<img src="./images/fig_2.jpg" style="width:80%">
+<img src="./images/fig_3.jpg">
 
-## Observation
+<h3>Observation</h3>
 
-1. **Least count of Polarimeter = ______**
-1. **For angle of rotation(θ)**
+<ol>
+   <li><b>Least count of Polarimeter = ______</b></li>
+   <li><b>For angle of rotation(θ)</b></li>
+</ol>
 
-## Observation Table
+<h3> Observation Table</h3>
 
-| Sr. no. | &emsp;&emsp;&emsp;CSR with Distilled water&nbsp;&nbsp;&emsp;&emsp;&emsp; | &nbsp;&nbsp;&emsp;&emsp;CSR with Sugar solution&emsp;&emsp;&emsp;&emsp; | &emsp;&emsp;&emsp;Angle of rotation&nbsp;&emsp;&emsp;&emsp; |
-| ------- | ------------------------------------------------------------------------ | ----------------------------------------------------------------------- | ----------------------------------------------------------- |
+<table style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr>
+                <th rowspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">Sr. No.</th>
+                <th colspan="5" style="border: 1px solid black; text-align: center; padding: 8px;">CSR with Distilled Water</th>
+                <th colspan="5" style="border: 1px solid black; text-align: center; padding: 8px;">CSR with Sugar Solution</th>
+                <th  style="border: 1px solid black; text-align: center; padding: 8px;">Angle of Rotation</th>
+            </tr>
+            <tr>
+                <th colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;">MSR</th>
+                <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">VSR = (LC &times; coinciding line)</th>
+                <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">TR = θ1</th>
+                <th colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;">MSR</th>
+                <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">VSR = (LC &times; coinciding line)</th>
+                <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">TR = θ2</th>
+                <th colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;">θ = θ1 - θ2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid black; text-align: center; padding: 8px;">1</td>
+                <td colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; text-align: center; padding: 8px;">2</td>
+                <td colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="1" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+                <td colspan="2" style="border: 1px solid black; text-align: center; padding: 8px;"></td>
+            </tr>
+        </tbody>
+    </table>
 
-| &emsp;&emsp;&emsp; | MSR | VSR=(LC * coinciding line) | TR=θ1 | MSR | VSR=(LC * coinciding line) | TR=θ2 | &emsp;&emsp;&emsp;&emsp;&emsp;θ = θ1-θ2&emsp;&emsp;&emsp;&emsp;&emsp; |
-| ------------------ | --- | -------------------------- | ----- | --- | -------------------------- | ----- | :-------------------------------------------------------------------: |
-| 1                  |     |                            |       |     |                            |       |                                                                       |
-| 2                  |     |                            |       |     |                            |       |                                                                       |
+<h3>Result</h3>
 
-## Result
-
-**Specific Rotation of Sugar solution is found out to be ______**
+<p>
+   <b>Specific Rotation of Sugar solution is found out to be ______</b>
+</p>
