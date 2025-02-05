@@ -1,0 +1,49 @@
+[
+    {
+        "question": "The quantity that is measured by a polarimeter is,",
+        "qid": 1,
+        "option_a": "Polarity of the substance",
+        "option_b": "Electrical conductivity of solution",
+        "option_c": "Wavelength of source light",
+        "option_d": "pH of the substance",
+        "correct_option": "a"
+    },
+    {
+        "question": "Specific rotation of an optically active compound is",
+        "qid": 2,
+        "option_a": "The optical rotation at specific chiral centre",
+        "option_b": "Optical rotation of one molecule",
+        "option_c": "Optical rotation at unit length and unit concentration",
+        "option_d": "Optical illusion of pure chiral solution",
+        "correct_option": "c"
+    },
+    {
+        
+        "question": "Which of the following is a true statement?",
+        "qid": 3,
+        "option_a": "Chiral molecules will rotate polarized light in a clockwise direction, termed dextrorotatory, and its mirror-image partner in a counter-clockwise termed levorotatory",
+        "option_b": "Chiral molecules will rotate polarized light in a clockwise direction, termed levorotatory, and its mirror-image partner in a counter-clockwise termed dextrorotatory",
+        "option_c": "Chiral molecules will rotate polarized light in a counter-clockwise direction, termed dextrorotatory, and its mirror-image partner in a clockwise termed levorotatory",
+        "option_d": "None of the options is true",
+        "correct_option": "a"
+    },
+    {
+        
+        "question": "Polarimeter works on the principle of which of the following?",
+        "qid": 4,
+        "option_a": "Change in the flow of liquids",
+        "option_b": "Change in the electrical conductivity of solution with concentration",
+        "option_c": "Interference of light",
+        "option_d": "Polarisation of light",
+        "correct_option": "d"
+    },
+    {
+        "question": "Which of the following most accurate about a plane polarised light?",
+        "qid": 5,
+        "option_a": "As it propagate, both magnitude of electric vector and direction of polarisation varies",
+        "option_b": "As it propagate, neither magnitude nor direction of electric vector varies",
+        "option_c": "As it propagate, magnitude of electric vector varies periodically but direction of polarisation remains unchanged",
+        "option_d": "Change in orientation of Nicol prism has no effect on direction of polarisation",
+        "correct_option": "c"
+    }
+]

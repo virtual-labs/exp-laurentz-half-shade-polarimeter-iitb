@@ -1,0 +1,1 @@
+## Laurent's half shade polarimeter: To determine the specific rotation of optically active substance
